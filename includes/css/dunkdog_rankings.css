@@ -1,0 +1,788 @@
+.post-preview{
+	display: block;
+	position: relative;
+}
+.post-preview .premium-badge{
+	display: block;
+	position: absolute;
+	margin-left: -55px;
+	margin-top: 5px;
+}
+
+.post-title a{
+	line-height: 24px;
+}
+
+
+/** loading bar .post-preview **/
+.loading{
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -100px;
+}
+.loading .bar {
+    /* Size and position */
+    font-size: 20px; /* 1em */
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 100px auto;
+ 
+    /* Styles */
+    border-radius: .5em; /* Height/2 */
+   /* background: white; 
+    background: rgba(255,255,255,0.6);*/
+    background: black; /* Fallback */
+    background: rgba(0,0,0,0.6);
+    box-shadow: 
+        0 0 0 .05em rgba(100,100,100,0.075), /* Subtle border */
+        0 0 0 .25em rgba(0,0,0,0.1),           /* Outter border */
+        inset 0 .1em .05em rgba(0,0,0,0.1),   /* Inset shadow */
+        0 .05em rgba(255,255,255,0.7);     /* Slight reflection */
+}
+.loading .bar:after {
+    /* Content and position */
+    content: "Please wait.";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+ 
+    /* Font styles */
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 1em;
+    color: #555;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+}
+.loading .bar .sphere {
+    border-radius: 50%;
+    width: 1em;
+    height: 100%;
+    background: -webkit-linear-gradient(#f28428, #e74324);
+    background: -moz-linear-gradient(#f28428, #e74324);
+    background: -ms-linear-gradient(#f28428, #e74324);
+    background: -o-linear-gradient(#f28428, #e74324);
+    background: linear-gradient(#f28428, #e74324);
+    box-shadow:
+        inset 0 .15em .1em rgba(255,255,255,0.3),
+        inset 0 -.1em .15em rgba(0,0,0,0.15),
+        0 0 .25em rgba(0,0,0,0.3);
+    display: block;
+    -webkit-animation: slide 1.75s ease-in-out infinite alternate;
+    -moz-animation: slide 1.75s ease-in-out infinite alternate;
+    -ms-animation: slide 1.75s ease-in-out infinite alternate;
+    -o-animation: slide 1.75s ease-in-out infinite alternate;
+    animation: slide 1.75s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-moz-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-ms-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-o-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@keyframes slide {
+    to { margin-left: 90%; }
+}
+
+
+/***  playerdb  **/
+.player-db-head{
+	position:relative;
+}
+.playerdb{
+	position:relative;
+	min-height: 200px;
+}
+#db-found{
+	color: #ffffff;
+	float: right;
+	display: block;
+	font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	float: right;
+	top: 15px;
+	right: 10px;
+	margin-left: -50px;
+	width: 75px;
+}
+
+
+.post_footer_call{
+	color: #f28428;
+   /* text-shadow: #000 1px 0px 1px;*/
+}
+
+/**
+#menu-posts-dd-player-ranking .wp-menu-image, #menu-posts-dd-team-ranking .wp-menu-image {
+background-position: -70px -32px;
+}
+
+.
+
+
+.icon16.icon-dashboard,
+#adminmenu .menu-icon-dashboard div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -60px -33px;
+}
+
+#adminmenu .menu-icon-dashboard:hover div.wp-menu-image,
+#adminmenu .menu-icon-dashboard.wp-has-current-submenu div.wp-menu-image,
+#adminmenu .menu-icon-dashboard.current div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -60px -1px;
+}
+
+.icon16.icon-post,
+#adminmenu .menu-icon-post div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -271px -33px;
+}
+
+#adminmenu .menu-icon-post:hover div.wp-menu-image,
+#adminmenu .menu-icon-post.wp-has-current-submenu div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -271px -33px;
+}
+
+.icon16.icon-media,
+#adminmenu .menu-icon-media div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -120px -33px;
+}
+
+#adminmenu .menu-icon-media:hover div.wp-menu-image,
+#adminmenu .menu-icon-media.wp-has-current-submenu div.wp-menu-image {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -120px -1px;
+}
+
+**/
+
+
+
+
+
+
+
+
+.player-mini-box{
+	width: 100% important;
+	height:60px;
+	-webkit-border-radius: 0px 99px 99px 99px;
+	-moz-border-radius: 0px 99px 99px 99px;
+	border-radius: 0px 99px 99px 99px;border:6px solid #FFFF00;
+	background-color: #f28428;
+	-webkit-box-shadow: #B3B3B3 14px 14px 14px;
+	-moz-box-shadow: #B3B3B3 14px 14px 14px; 
+	box-shadow: #B3B3B3 14px 14px 14px;
+}
+
+.player-mini-box-thumbnail{
+	width: 150px;
+	float:right;
+}
+.player-mini-box-thumbnail img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+.player-db-list{
+	padding-right: 40px;
+}
+.player-db-list-title{
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: 20px;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+
+
+
+
+div.playerContainer{position:relative;margin-top:10px;}
+
+div.headerBar{width:100%; height:10px; margin-bottom:7px;}
+
+div.playerHeader{
+	width:100%;
+	height:68px;
+	position: relative;
+	background: #f28428; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f28428 0%, #e2cfc0 4%, #f28428 17%, #e74324 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f28428), color-stop(4%,#e2cfc0), color-stop(17%,#f28428), color-stop(100%,#e74324)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28428', endColorstr='#e74324',GradientType=0 ); /* IE6-9 */
+}
+
+div.rank{
+	width:54px;
+	height:49px;
+	color: black;
+	text-align: center;position:absolute;
+	top: 7px;left: 7px;
+	background-color: white;
+	font: bold 22px/2.2em 'Michroma',sans-serif;
+	border: 2px inset silver;
+}
+
+div.headerTop{position: absolute;top: 9px;left: 80px;}
+
+div.playerName, div.playerName a{
+	font-family:Helvetica, 
+	sans-serif;font-size: 22px;
+	color: #ffffff;
+	font-weight: bold;
+	float:left;
+	margin-right:10px;
+	text-shadow: #000 2px 2px 4px;
+	text-decoration: none;
+}
+
+
+
+div.playerName a{
+	color: white;
+}
+
+
+div.teamName{font-family:Helvetica, sans-serif;font-size: 16px;color: #cccccc;font-weight: bold;float:left;margin-right:10px; padding-top: 5px;}
+div.scoutsGrade{float:left;margin-top:5px;}
+div.teamImage{
+	position:absolute;
+	top:10px;
+	right:5px;}
+
+
+div.info{
+	height:14px; 
+	line-height: 12px;
+	top: 43px;
+	position: absolute;
+	left: 80px;
+	font-weight:bold;
+	text-shadow: #000 1px 1px 2px;
+}
+
+div.teamDiv div.info{
+	top: 38px;
+}
+div.teamDiv div.info span{
+	font-size: 14px;
+}
+
+div.bio{
+	float:left;
+	color:#ffffff;
+	border-right: 1px solid #cbcbcb;
+	margin-right: 7px;
+	font-size: 12px;
+	padding: 5px 5px 0px 0px;
+	font-family: Helvetica;
+}
+
+
+
+div.biolast{
+	border-right: 0px solid #cbcbcb !important;
+}
+
+div.bio a{
+	color: white;
+	border-bottom-style: none !important;
+	border-bottom-width: 0 !important ;
+}
+
+div.contact{
+	font-size: 14px !important;
+	height:17px; 
+	top: 24px;
+	position: absolute;
+	left: 80px;
+	font-weight:bold;
+	text-shadow: #000 1px 1px 2px;
+}
+
+div.pos{border: 0px;}
+span.label{font-size:10px;}
+div.grade{float:left;color:#ffa800;font-family: 'Michroma', sans-serif;margin-left:6px;font-size:16px;}
+div.scoutsLabel {float:left;margin-top:6px;}
+div.photoShadow{background:width:135px;height:66px;position:absolute;top:0px;left:407px;}
+div.playerPhoto{position:absolute;top:-4px;right:50px;
+	z-index:1;}
+
+div.teamImage a{
+	color: #ffffff;
+	font-weight: bolder;
+	text-shadow: #000 1px 1px 2px;
+	display: block;
+	width:50px;
+	text-align: right;
+	line-height: 15px;
+}
+
+div.teamRankImage{
+	position:absolute;
+	right: 25px;
+	height: 50px !important;
+}
+
+div.teamRankImage img, div.teamRankImage a img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*div.headerShadow{width:576px;height:7px;background:url; margin:1px 0px 5px 0px;}
+div.stats{width:550px;border-top: 2px solid #e4e4e4;border-bottom: 2px solid #e4e4e4;height: 27px;padding: 2px 0px 0px 0px;margin-bottom: 10px;}
+div.statBox{height:20px;background-color:#e8e8e8;float:left;font-weight: bold;font-size: 10px;text-align: center;margin-right: 3px;padding: 5px 12px 0px 12px;}
+div.first{background-image:url(http://assets.espn.go.com/magazine/Insider/Scouts_2012stats.png);width:80px;height:24px;float:left;margin-right: 3px;}
+div.lastStat{width:99px;text-align:left !important;padding: 5px 0px 0px 12px !important;}
+div.analysisContainer{clear:both;margin-left: 12px;width: 550px;margin-top: 5px;float: left;}
+div.analysisHead{font-weight:bold;font-size: 13px;padding-bottom: 5px;font-family: Helvetica, sans-serif;float:left;}
+div.analysisBreak{height:2px;width:550px;background-color:#e4e4e4}
+div.analysis{clear:both;}
+div.moreAnalysis{display:none;}
+div.hideAnalysis{color: #225FB2;font-weight:bold;display:block;cursor:pointer;}
+div.showAnalysis{display:block;cursor:pointer;color: #225FB2;font-weight:bold;}
+div.active{	display:none;}
+
+*/
+/*****************************[   RANKINGS PAGE   ]*********************/
+.rankings-header{
+	position: relative;
+	padding-right: 0px !important;
+	margin-top: -40px;
+	width: 100% !important;
+	height: 160px !important;
+	background: url(../images/court_header_background.jpg) no-repeat;
+	background-image: url(../images/court_header_background.jpg);
+}
+
+.rankings-header .rankings-header-info{
+	position: relative;
+	float: left;
+	display: block;
+	left: 50px;
+	top: 25px;
+}
+.rankings-header h1{
+	color: #FFFFFF;
+	font: bold 34px/34px Helvetica,Arial,sans-serif;
+	text-shadow: #000 2px 2px 4px;
+}
+.rankings-header h3{
+	color: #FFFFFF;
+	font: bold 28px/28px Helvetica,Arial,sans-serif;
+	text-shadow: #000 2px 2px 4px;
+}
+
+/*****************************[   PLAYER PROFILE PAGE   ]*********************/
+.player-profile{
+	position: relative;
+	margin-top: -40px;
+	width: 100%;
+	height: 234px; !important
+	background: url(../images/court_header_background.jpg) no-repeat;
+	background-image: url(../images/court_header_background.jpg);
+}
+
+.player-profile .player-profile-headshot{
+	margin-top: 15px;
+	position: relative;
+	float: right;
+	display: block;
+	clear: none;
+}
+
+.player-profile .player-profile-info{
+	position: relative;
+	float: left;
+	display: block;
+	left: 50px;
+	top: 25px;
+}
+
+.player-profile  .team-logo{
+	/*position: absolute;
+	bottom: 70px;
+	right: 20px;*/
+	right: 35%;
+	position: absolute;;
+	top: 30%;
+	float:right;
+}
+
+.player-profile  .team-logo a{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.player-profile .player-profile-rank{
+	position: absolute;
+	right: -30px;
+	top: -10px;
+	display: block;
+	float: right;
+}
+
+.player-bio{
+	color: #FFFFFF;
+	text-shadow: #000 2px 2px 4px;
+}
+
+
+.player-profile h1{
+	color: #FFFFFF;
+	font: bold 34px/34px Helvetica,Arial,sans-serif;
+	text-shadow: #000 2px 2px 4px;
+}
+
+.player-bio .general-info li span{
+	color: #aeaeae;
+	width: 60px;
+	display: block;
+	float: left;
+}
+
+.player-bio .general-info li a, .player-bio .school-info li a, .team-info, .team-conference a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none; !important
+	text-transform: uppercase;
+}
+.player-bio .general-info li, .team-info li{
+	color: #aeaeae;
+	border-right: rgba(255,255,255,.3) 1px solid;
+	padding: 0 10px;
+	margin: 0px;
+	font: normal 16px/30px Helvetica,arial,sans-serif;
+	display: inline;
+}
+
+.player-bio .school-info li span, .player-bio .school-info li b, .team-info li b{
+	color: #aeaeae; 255,255,255,.3) 1px solid;
+	margin: 0px;
+	font: normal 16px/18px Helvetica,arial,sans-serif;
+	display: inline;
+	padding-right: 10px;
+}
+
+
+.player-bio .general-info li b, .player-bio .school-info li b, .team-info li b, .team-conference b{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.player-bio .school-info li.class a, .team-info li{font-size:20px}
+
+.player-bio .general-info li.first, .team-info li.first {padding-left: 0px;}
+
+.player-bio .general-info li.last, .team-info li.last{border: 0;}
+
+.team-info, .team-conference{
+	margin-top:  10px;
+	margin-left: 5px;	
+}
+.team-info li, .team-conference{
+	font-size: 20px !important;
+	color: white;
+}
+.team-attending{
+	margin-top: 50px;
+	margin-left: 5px;
+	font-size: 16px;
+	color: white;
+}
+
+.line-divider{
+	width: 100%;
+	-webkit-box-shadow: 0 1px 11px #fff;
+	-moz-box-shadow: 0 1px 11px #fff;
+	border-top: 1px solid #fff;
+	opacity: .3;
+	filter: alpha(opacity=30);
+	float: none;
+	display: block;
+	height: 1px;
+}
+
+.player-bio{padding-top: 4px;}
+.player-bio .general-info{padding-top: 4px; margin-left:0px;}
+.player-bio .school-info{margin-top: 10px; margin-left: 0px; list-style-type: none;}
+
+
+
+.college-team-single-image{
+	float: left !important;
+	margin-left: 20px;
+}
+
+.college-team-single-title{
+	margin-left: -70px;
+}
+
+
+.profile-news .row .span11 .page-content .has-preview-image .post-preview-heading, .profile-news .row .span11 .page-content .has-preview-image .post-meta, .profile-news .row .span11 .page-content .has-preview-image .post-content{
+	/*width: 100% !important;*/
+}
+
+.profile-news .row .span11{
+	margin-left: 20px;
+}
+
+
+/********    FAQ     *********/
+.faqHeader, .faqHeader a{
+	height:48px; !important
+	background: -moz-linear-gradient(top,  #f28428 0%, #e2cfc0 4%, #f28428 17%, #e74324 100%); !important/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f28428), color-stop(4%,#e2cfc0), color-stop(17%,#f28428), color-stop(100%,#e74324)); !important /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* IE10+ */
+	background: linear-gradient(to bottom,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28428', endColorstr='#e74324',GradientType=0 ); !important /* IE6-9 */
+}
+
+.faqName{
+	margin-left: 30px;
+	font-size:15px;
+	text-shadow: #000 1px 2px 3px;
+	text-decoration: none;
+}
+.faqIconOpen{
+	float:left;
+}
+
+
+
+/****   TEAM RANKINGS *******/
+div.teamRankings{
+	padding-top: 20px;
+}
+.teamHeader, .teamHeader a{
+	height:68px; !important
+	background: -moz-linear-gradient(top,  #f28428 0%, #e2cfc0 4%, #f28428 17%, #e74324 100%); !important/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f28428), color-stop(4%,#e2cfc0), color-stop(17%,#f28428), color-stop(100%,#e74324)); !important /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* IE10+ */
+	background: linear-gradient(to bottom,  #f28428 0%,#e2cfc0 4%,#f28428 17%,#e74324 100%); !important /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28428', endColorstr='#e74324',GradientType=0 ); !important /* IE6-9 */
+}
+
+div.teamName, div.teamName a{
+	font-family:Helvetica, 
+	sans-serif;font-size: 20px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-top: 0px;
+	padding-left: 65px;
+	text-shadow: #000 2px 3px 4px;
+	text-decoration: none;
+}
+
+.teamRankIconOpen{
+	/*text-shadow: #000 1px 2px 3px;*/
+	position:absolute;
+	top: 40px;
+	right: -5px;
+	font-size: 10px;
+}
+
+/** player card white box **/
+
+.player_card_white_box{
+	font-size: 11px;
+	background-color: #f8f8f8;
+	margin: 3px 3px 5px;
+	padding: 8px;
+	border: 1px solid #e8e7e9;
+}
+.player_card_white_box a img{
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-bottom:5px;
+	margin-right: 5px;
+	margin-top: 0px;
+}
+
+.white_box_half a img{
+	width: 30% !important;
+	max-width: 30%;
+}
+
+.white_box_full{
+	font-size: 13px;
+}
+
+.white_box_full a img{
+	width: 25%;
+	max-width:25%;
+}
+
+/*** trying to figure out hover line **/
+.player-photo a:hover, .teamImage a:hover, .playerPhoto a:hover, .team-logo a:hover, .team-logo img:hover {
+     box-shadow: none;
+    filter: none !important;
+    border: 0 !important;
+}
+
+.activeDBItem a{
+	color: #ffffff;
+	background-color:: #b30027 !important;
+}
+
+.bbp-template-notice{
+	visibility: hidden;
+}
+
+
+/*** team profile *****/
+.team-profile-image{
+	margin-right:35px;
+}
+
+
+
+
+/** weird image white background issue **/
+.playerPhoto a, .playerPhoto a img{
+    background: transparent !important;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+    -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+    border-radius: 0px !important;
+    margin-bottom: 0 !important;
+	border-width: 0;
+	border-bottom-style: none !important;
+	border-bottom-width: 0 !important;
+}
+
+/*.playerPhoto a img{
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+-moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+border-radius: 0px;
+margin-bottom: 0px;
+	background-image: none;
+	background-color: rgba(0,0,0,0) !important;
+}
+*/
+
+
+
+
+
+
+.forum_link_button{width:100% !important;}
+
+.subheader h1 {
+font-size: 24px !important;
+line-height: 24px !important;
+}
+
+/*** player card  **/
+.playerCard{
+	background-color: #fbfbfb;
+	border: 1px solid orange;
+	padding: 10px;
+	margin-bottom:  6px;
+}
+.playerCardName{
+	font-size: 14px;
+	font-weight: bold;
+}
+.playerCardText{
+	padding: 4px;
+}
+
+
+.cardview {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+.cardview .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.cardview img {
+    display: block;
+    position: relative
+}
+.cardview h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.cardview p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.cardview a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.cardview a.info:hover {
+    box-shadow: 0 0 5px #000
+}
